@@ -132,75 +132,121 @@
             border-bottom-color: var(--gold);
         }
 
-.media-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    margin-top: 20px;
-}
+        /* --- GALLERY GRID STYLES --- */
+        .media-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
 
-@media (min-width: 600px) {
-    .media-grid { grid-template-columns: 1fr 1fr 1fr; }
-}
+        @media (min-width: 600px) {
+            .media-grid { grid-template-columns: 1fr 1fr 1fr; }
+        }
 
-.media-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    background: #000; /* Dark background for the fade effect */
-}
+        .media-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #000;
+        }
 
-.media-link {
-    display: block;
-    text-decoration: none;
-}
+        .media-link {
+            display: block;
+            text-decoration: none;
+        }
 
-.responsive-art {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    display: block;
-    transition: opacity 0.4s ease, transform 0.4s ease;
-}
+        .responsive-art {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
 
-.caption-overlay {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    background: rgba(0, 0, 0, 0.4); /* Subtle dimming of the image */
-}
+        .caption-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background: rgba(0, 0, 0, 0.4);
+        }
 
-.overlay-text {
-    color: #fff !important; /* Forces white text on the dark overlay */
-    font-family: 'Zalando Sans', sans-serif;
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin: 0;
-    padding: 0 10px;
-    text-align: center;
-}
+        .overlay-text {
+            color: #fff !important;
+            font-family: 'Zalando Sans', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0 10px;
+            text-align: center;
+        }
 
-.play-button-small {
-    color: #fff;
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-}
+        .play-button-small {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
 
-/* Hover States */
-.media-item:hover .responsive-art {
-    opacity: 0.6; /* Dims the photo so text is readable */
-    transform: scale(1.05);
-}
+        .media-item:hover .responsive-art {
+            opacity: 0.6;
+            transform: scale(1.05);
+        }
 
-.media-item:hover .caption-overlay {
-    opacity: 1;
-}
+        .media-item:hover .caption-overlay {
+            opacity: 1;
+        }
+
+        /* --- CONTACT FORM STYLES (RESTORED) --- */
+        #contact {
+            min-height: auto;
+            align-items: flex-start;
+            padding-bottom: 120px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #e8e6e1;
+            background: #ffffff;
+            font-family: 'SN Pro', sans-serif;
+            font-size: 0.9rem;
+            border-radius: 0;
+            box-sizing: border-box; /* Ensures padding doesn't break width */
+            transition: border 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        button {
+            background: var(--name-grey);
+            color: #fff;
+            padding: 15px 40px;
+            border: none;
+            font-family: 'Zalando Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover { 
+            background: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        .fade-in { animation: fadeIn 2s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
     </style>
 </head>
@@ -235,41 +281,41 @@
     </section>
 
     <section id="listen">
-    <div class="container">
-        <h2>LISTEN</h2>
-        <div class="media-grid">
-            
-            <div class="media-item">
-                <a href="https://www.youtube.com/watch?v=SbgrsoyATMc" target="_blank" class="media-link">
-                    <img src="thumbnail.jpg" alt="Performance" class="responsive-art">
-                    <div class="caption-overlay">
-                        <div class="play-button-small">▶</div>
-                        <p class="overlay-text">Performance</p>
-                    </div>
-                </a>
-            </div>
+        <div class="container">
+            <h2>LISTEN</h2>
+            <div class="media-grid">
+                
+                <div class="media-item">
+                    <a href="https://www.youtube.com/watch?v=SbgrsoyATMc" target="_blank" class="media-link">
+                        <img src="thumbnail.jpg" alt="Performance" class="responsive-art">
+                        <div class="caption-overlay">
+                            <div class="play-button-small">▶</div>
+                            <p class="overlay-text">Performance</p>
+                        </div>
+                    </a>
+                </div>
 
-            <div class="media-item">
-                <a href="https://music.youtube.com/playlist?list=OLAK5uy_lvtHfc_ByWuO8GVxaBIFruLgdIPGye35I" target="_blank" class="media-link">
-                    <img src="https://lh3.googleusercontent.com/TUUmFSwyodtJMYq9DY_1yfnNeJqHTN2A_Md2J3WrANYP53W2jZksGLVBp14WJjrORkqTZTKExWpAkwbbJA=w544-h544-l90-rj" alt="Werther" class="responsive-art">
-                    <div class="caption-overlay">
-                        <p class="overlay-text">Werther (HGO)</p>
-                    </div>
-                </a>
-            </div>
+                <div class="media-item">
+                    <a href="https://music.youtube.com/playlist?list=OLAK5uy_lvtHfc_ByWuO8GVxaBIFruLgdIPGye35I" target="_blank" class="media-link">
+                        <img src="https://lh3.googleusercontent.com/TUUmFSwyodtJMYq9DY_1yfnNeJqHTN2A_Md2J3WrANYP53W2jZksGLVBp14WJjrORkqTZTKExWpAkwbbJA=w544-h544-l90-rj" alt="Werther" class="responsive-art">
+                        <div class="caption-overlay">
+                            <p class="overlay-text">Werther (HGO)</p>
+                        </div>
+                    </a>
+                </div>
 
-            <div class="media-item">
-                <a href="https://music.youtube.com/playlist?list=OLAK5uy_kEZkvCb8BdzNT5UVry3NmMm9GphOJqoe4" target="_blank" class="media-link">
-                    <img src="https://lh3.googleusercontent.com/sy4JBMVGK0UekxM1uIVOzYlfJJTMIWWLDzqFhEtQxFpSSk847plh319s8NjPgO1Ax31Fvx6x0HiIORUq=w544-h544-l90-rj" alt="Intelligence" class="responsive-art">
-                    <div class="caption-overlay">
-                        <p class="overlay-text">Intelligence (HGO)</p>
-                    </div>
-                </a>
-            </div>
+                <div class="media-item">
+                    <a href="https://music.youtube.com/playlist?list=OLAK5uy_kEZkvCb8BdzNT5UVry3NmMm9GphOJqoe4" target="_blank" class="media-link">
+                        <img src="https://lh3.googleusercontent.com/sy4JBMVGK0UekxM1uIVOzYlfJJTMIWWLDzqFhEtQxFpSSk847plh319s8NjPgO1Ax31Fvx6x0HiIORUq=w544-h544-l90-rj" alt="Intelligence" class="responsive-art">
+                        <div class="caption-overlay">
+                            <p class="overlay-text">Intelligence (HGO)</p>
+                        </div>
+                    </a>
+                </div>
 
+            </div>
         </div>
-    </div>
-</section>
+    </section>
     
     <section id="contact"> 
         <div class="container">
