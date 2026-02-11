@@ -199,6 +199,33 @@
         .fade-in { animation: fadeIn 2s ease-out; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
+/* Keeps the album art from breaking the mobile layout */
+.responsive-art {
+    width: 100%;
+    max-width: 544px; /* Matches your desired size on desktop */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Adds a soft shadow to match your video */
+    transition: transform 0.3s ease;
+}
+
+.responsive-art:hover {
+    transform: scale(1.02);
+}
+
+.album-card {
+    text-align: center;
+    width: 100%;
+}
+
+/* Give the album section its own ID to avoid duplicate #video-section IDs */
+#album-section {
+    padding-top: 0; /* Tightens space between the video and the album */
+    padding-bottom: 80px;
+}
+        
     </style>
 </head>
 <body>
@@ -243,14 +270,16 @@
         </div>
     </section>
 
-    <section id="video-section">
-        <div class="container">
-            <div class="album-link">
-               <a href="https://music.youtube.com/playlist?list=OLAK5uy_lvtHfc_ByWuO8GVxaBIFruLgdIPGye35I&si=TIrv-0YphbRTDTN9" target="_blank" rel="noopener noreferrer">
-  <img src="https://lh3.googleusercontent.com/TUUmFSwyodtJMYq9DY_1yfnNeJqHTN2A_Md2J3WrANYP53W2jZksGLVBp14WJjrORkqTZTKExWpAkwbbJA=w544-h544-l90-rj" alt="Album Name Cover Art" style="width:544px; height:544px; border-radius:8px;">
-</a>
-            </div>
+    <section id="album-section">
+    <div class="container">
+        <h2>ALBUM</h2>
+        <div class="album-card">
+            <a href="https://music.youtube.com/playlist?list=OLAK5uy_lvtHfc_ByWuO8GVxaBIFruLgdIPGye35I&si=TIrv-0YphbRTDTN9" target="_blank" rel="noopener noreferrer">
+                <img src="https://lh3.googleusercontent.com/tHqIuBAtPjVfP0A4K0P2j9_03mN2O4B_P_M7lV-f6nE=w544-h544-l90-rj" alt="Henry Williford Album Art" class="responsive-art">
+            </a>
+            <p style="text-align: center; margin-top: 15px; font-size: 0.9rem;">Listen on YouTube Music</p>
         </div>
+    </div>
     </section>
     
     <section id="contact"> 
