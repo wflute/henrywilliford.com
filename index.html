@@ -132,46 +132,75 @@
             border-bottom-color: var(--gold);
         }
 
-       /* --- Three-Column Gallery Styles --- */
 .media-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Stacks on mobile */
+    grid-template-columns: 1fr;
     gap: 20px;
     margin-top: 20px;
 }
 
-/* Desktop View: Three columns in one row */
 @media (min-width: 600px) {
-    .media-grid {
-        grid-template-columns: 1fr 1fr 1fr; 
-    }
+    .media-grid { grid-template-columns: 1fr 1fr 1fr; }
 }
 
 .media-item {
-    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #000; /* Dark background for the fade effect */
 }
 
-.thumbnail-wrapper, .album-card {
-    position: relative;
+.media-link {
     display: block;
-    width: 100%;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
 }
 
 .responsive-art {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Ensures all three covers are perfect squares */
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     display: block;
-    border-radius: 6px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.thumbnail-wrapper:hover, .album-card:hover {
-    transform: scale(1.05); /* Slight pop-out effect */
-    z-index: 10;
+.caption-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background: rgba(0, 0, 0, 0.4); /* Subtle dimming of the image */
 }
-/* --- End Updated Styles --- */
+
+.overlay-text {
+    color: #fff !important; /* Forces white text on the dark overlay */
+    font-family: 'Zalando Sans', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.play-button-small {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+/* Hover States */
+.media-item:hover .responsive-art {
+    opacity: 0.6; /* Dims the photo so text is readable */
+    transform: scale(1.05);
+}
+
+.media-item:hover .caption-overlay {
+    opacity: 1;
+}
 
     </style>
 </head>
