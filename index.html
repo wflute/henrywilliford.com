@@ -32,7 +32,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* 2. Scroll Progress Bar */
         #progress-container {
             position: fixed;
             top: 0;
@@ -46,7 +45,6 @@
             width: 0%;
         }
 
-        /* 5. Sticky Navigation */
         nav {
             position: sticky;
             top: 0;
@@ -98,28 +96,28 @@
             margin-left: 20px;
         }
 
-       /* Tightened Quote Section */
-.quote-box {
-    text-align: center;
-    padding: 30px 0; /* Reduced from 60px */
-}
 
-.quote-text {
-    font-family: 'Zalando Sans', sans-serif;
-    font-size: 1.4rem; /* Reduced from 1.8rem */
-    color: var(--gold);
-    font-style: italic;
-    margin-bottom: 5px;
-    letter-spacing: -0.01em;
-}
+    .quote-box {
+        text-align: center;
+        padding: 30px 0;
+    }
 
-.quote-author {
-    font-size: 0.7rem; /* Slightly smaller */
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--slate);
-    opacity: 0.8;
-}
+    .quote-text {
+        font-family: 'Zalando Sans', sans-serif;
+        font-size: 1.4rem;
+        color: var(--gold);
+        font-style: italic;
+        margin-bottom: 5px;
+        letter-spacing: -0.01em;
+        }
+
+    .quote-author {
+        font-size: 0.7rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--slate);
+        opacity: 0.8;
+    }
 
         p {
             font-weight: 300; 
@@ -131,7 +129,7 @@
 
         .nav-container {
             display: flex;
-            gap: 30px;
+            gap: 10px;
             justify-content: center;
         }
 
@@ -148,7 +146,6 @@
 
         .cta-link:hover { color: var(--gold); }
 
-        /* Media Grid */
         .media-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -187,7 +184,6 @@
 
         .overlay-text { color: #fff !important; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; text-align: center; }
 
-        /* Form */
         input, textarea {
             width: 100%; padding: 15px; margin-bottom: 20px;
             border: 1px solid #e8e6e1; font-family: inherit;
@@ -282,7 +278,6 @@
     </section>
 
     <script>
-        // Progress Bar Logic
         window.onscroll = function() {
             var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
