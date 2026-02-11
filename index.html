@@ -225,7 +225,43 @@
     padding-top: 0; /* Tightens space between the video and the album */
     padding-bottom: 80px;
 }
-        
+  /* Container for the fake video player */
+.thumbnail-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* The Play Button Overlay */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--name-grey);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    pointer-events: none; /* Allows the click to pass through to the link */
+}
+
+/* Hover Effect: The button glows and the image zooms slightly */
+.thumbnail-wrapper:hover .play-button {
+    background: var(--gold);
+    color: white;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.thumbnail-wrapper:hover .responsive-art {
+    transform: scale(1.02);
+    filter: brightness(0.9);
+}      
     </style>
 </head>
 <body>
@@ -258,17 +294,18 @@
         </div>
     </section>
 
-    <section id="video-section">
-        <div class="container">
-            <div class="video-wrapper">
-                <iframe 
-                    src="https://www.youtube.com/embed/SbgrsoyATMc" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
+<section id="video-section">
+    <div class="container">
+        <div class="video-disguise">
+            <a href="https://www.youtube.com/watch?v=SbgrsoyATMc" target="_blank" rel="noopener noreferrer">
+                <div class="thumbnail-wrapper">
+                    <img src="YOUR_VIDEO_THUMBNAIL_URL" alt="Henry Williford Performance" class="responsive-art">
+                    <div class="play-button">▶</div>
+                </div>
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="album-section">
     <div class="container">
