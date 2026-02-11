@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Henry Williford | Flute</title>
+    <title>Henry Williford | Flutist</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,14 +12,13 @@
     <style>
         html { scroll-behavior: smooth; }
         
-        /* The Refined Palette */
         :root {
-            --bg-color: #faf9f6;    /* Soft Alabaster/Paper White */
-            --bio-bg: #f3f2ee;      /* Subtle Stone for Bio section */
-            --name-grey: #555555;   /* Sophisticated Gallery Grey */
-            --slate: #666666;       /* Softened paragraph text */
-            --gold: #c5a059;        /* Champagne Gold */
-            --light-gold: #ede4d5;  /* Accent Gold */
+            --bg-color: #faf9f6;    
+            --bio-bg: #f3f2ee;      
+            --name-grey: #555555;   
+            --slate: #666666;       
+            --gold: #c5a059;        
+            --light-gold: #ede4d5;  
         }
 
         body { 
@@ -39,7 +38,6 @@
             box-sizing: border-box;
         }
 
-        /* Tighter, centered header */
         #home {
             height: 45vh; 
             align-items: center;
@@ -51,7 +49,6 @@
             width: 100%;
         }
 
-        /* Typography */
         h1 { 
             font-family: 'Zalando Sans', sans-serif;
             font-weight: 600; 
@@ -98,7 +95,6 @@
             margin-bottom: 35px;
         }
 
-        /* Navigation Links */
         .nav-container {
             display: flex;
             gap: 30px;
@@ -141,7 +137,6 @@
             padding-bottom: 120px;
         }
 
-        /* Form Styling */
         input, textarea {
             width: 100%;
             padding: 15px;
@@ -200,10 +195,12 @@
     <section id="bio" style="background-color: var(--bio-bg);">
         <div class="container">
             <h2>BIO</h2>
-            <p>Often admonished for “swagger”, “extreme dynamics”, and “big **** energy”, Henry's performances around the world have drawn constant negative feedback. At the 2014 Concours de Geneve his first and only round was later described by jury member Mathieu Dufour as “hey baby, do you wanna come take a taste?”</p>
-            <p>Of the same performance, former principal flute of the Israel philharmonic, Eyal Ein-Habar said “I felt things were not going according to plan.” In his home country of the USA, critics have also derided his “sound like a truck” and his “looking taller on stage then [he] actually is.”</p>
-            <p>Noted film soundtrack flautist Jim Walker described his performance in Los Angeles as “too musical.” One critic noted his “copious glugs of water” during a recital at the age of 20. Many have reacted in the years since with simply “too much.” Henry was denied an audition at the Berliner Philharmoniker's Karajan Academy on account of his advanced age, but he did not begin balding until the following year.</p>
-            <p>The Chicago Tribune wrote of Henry “a flutist”. Michael Tilson Thomas may have been complimenting Henry's enigmatic style when he said “Andrew”—three times. In his current position with the Houston Grand Opera he has often been relegated to the far reaches of the stage and pit to prevent the spread of disease, and has been described as “late” on most audible entrances. His latest and only solo appearance in the 2023-2024 Season was with the Kazakh Philharmonic, in Almaty, of all places.</p>
+            <p>Often admonished for “swagger”, “extreme dynamics”, and “big **** energy”, Henry's performances around the world have drawn constant negative feedback. The Chicago Tribune wrote of Henry “a flutist”. In his current position with the Houston Grand Opera he has often been relegated to the far reaches of the stage and pit to prevent the spread of disease.</p>
+            
+            <p>At the 2014 Concours de Geneve his first and only round was later described by jury member Mathieu Dufour as “hey baby, do you wanna come take a taste?” Of the same performance, former principal flute of the Israel philharmonic, Eyal Ein-Habar said “I felt things were not going according to plan.” In his home country of the USA, critics have also derided his “sound like a truck” and his “looking taller on stage then [he] actually is.” Noted film soundtrack flautist Jim Walker described his performance in Los Angeles as “too musical.” Michael Tilson Thomas may have been complimenting Henry's enigmatic style when he said “Andrew”—three times. One critic noted his “copious glugs of water” during a recital at the age of 20. Many have reacted in the years since with simply “too much.”</p>
+            
+            <p>Henry was denied an audition at the Berliner Philharmoniker's Karajan Academy on account of his advanced age, but he did not begin balding in earnest until the following year.</p>
+            <p>His latest and only solo appearance in the 2023-2024 Season was with the Kazakh Philharmonic, in Almaty, of all places.</p>
             
             <p style="font-style: italic; margin-top: 40px;">Seriously, though, Henry is employed and is performing and is a <a href="https://www.yamaha.com/artists/henrywilliford.html" target="_blank" class="yamaha-link">Yamaha Artist</a>.</p>
         
@@ -213,8 +210,9 @@
 
     <section id="contact"> 
         <div class="container">
-            <h2>Inquiries and Lessons</h2>
+            <h2>For All Inquiries and Lessons</h2>
             <form action="https://formspree.io/f/your-id-here" method="POST">
+                <input type="hidden" name="_next" value="https://www.henrywilliford.com/success.html">
                 <input type="text" name="name" placeholder="Name" required>
                 <input type="email" name="_replyto" placeholder="Email Address" required>
                 <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
