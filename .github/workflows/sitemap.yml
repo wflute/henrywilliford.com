@@ -1,7 +1,7 @@
 name: Generate sitemap
 on:
   push:
-    branches: [ main, master ] # This covers you whether your branch is named main or master
+    branches: [ main, master ]
 
 jobs:
   sitemap_job:
@@ -15,7 +15,7 @@ jobs:
       - name: Generate the sitemap
         uses: cicirello/generate-sitemap@v1
         with:
-          base-url-path: https://yourdomain.com/ # Change to your domain!
+          base-url-path: https://henrywilliford.com/
 
       - name: Commit and push sitemap
         run: |
