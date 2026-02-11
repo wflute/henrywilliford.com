@@ -132,120 +132,46 @@
             border-bottom-color: var(--gold);
         }
 
-        /* --- Updated Media Grid Styles --- */
-        .media-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
-            margin-top: 20px;
-        }
+       /* --- Three-Column Gallery Styles --- */
+.media-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Stacks on mobile */
+    gap: 20px;
+    margin-top: 20px;
+}
 
-        /* Deskrop View: Two columns for a balanced look */
-        @media (min-width: 600px) {
-            .media-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
+/* Desktop View: Three columns in one row */
+@media (min-width: 600px) {
+    .media-grid {
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+}
 
-        .media-item {
-            text-align: center;
-        }
+.media-item {
+    text-align: center;
+}
 
-        .thumbnail-wrapper, .album-card {
-            position: relative;
-            display: block;
-            width: 100%;
-            transition: transform 0.3s ease;
-        }
+.thumbnail-wrapper, .album-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
-        .responsive-art {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
+.responsive-art {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Ensures all three covers are perfect squares */
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
 
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(255, 255, 255, 0.8);
-            color: var(--name-grey);
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            pointer-events: none;
-            transition: all 0.3s ease;
-        }
-
-        .thumbnail-wrapper:hover, .album-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .thumbnail-wrapper:hover .play-button {
-            background: var(--gold);
-            color: white;
-            transform: translate(-50%, -50%) scale(1.1);
-        }
-
-        .media-caption {
-            text-align: center; 
-            margin-top: 15px; 
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--slate);
-        }
-
-        #bio, #contact, #listen {
-            min-height: auto;
-            align-items: flex-start;
-            padding-bottom: 120px;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 20px;
-            border: 1px solid #e8e6e1;
-            background: #ffffff;
-            font-family: 'SN Pro', sans-serif;
-            font-size: 0.9rem;
-            border-radius: 0;
-            transition: border 0.3s ease;
-        }
-
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: var(--gold);
-        }
-
-        button {
-            background: var(--name-grey);
-            color: #fff;
-            padding: 15px 40px;
-            border: none;
-            font-family: 'Zalando Sans', sans-serif;
-            font-weight: 600;
-            font-size: 0.8rem;
-            letter-spacing: 0.2em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        button:hover { 
-            background: var(--gold);
-            transform: translateY(-2px);
-        }
-
-        .fade-in { animation: fadeIn 2s ease-out; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.thumbnail-wrapper:hover, .album-card:hover {
+    transform: scale(1.05); /* Slight pop-out effect */
+    z-index: 10;
+}
+/* --- End Updated Styles --- */
 
     </style>
 </head>
