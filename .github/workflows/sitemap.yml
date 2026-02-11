@@ -1,2 +1,27 @@
+name: Generate sitemap
+on:
+  push:
+    branches: [ main, master ] # This covers you whether your branch is named main or master
 
+jobs:
+  sitemap_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 
+
+      - name: Generate the sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://yourdomain.com/ # Change to your domain!
+
+      - name: Commit and push sitemap
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add sitemap.xml
+          git commit -m "Automated sitemap update" || exit 0
+          git push
 
